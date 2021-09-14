@@ -1,5 +1,5 @@
-FROM openjdk 11.0.12
-COPY ./src/java
+FROM openjdk:8
+COPY . /src/java
 WORKDIR /src/java
 RUN ["javac", "javafile.java"]
 ENTRYPOINT ["java", "javafile.java"]
